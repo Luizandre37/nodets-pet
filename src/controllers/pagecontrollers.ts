@@ -1,24 +1,19 @@
-import { Request,Response } from "express";
-import { request } from "http";
+import { Request, Response } from "express";
 
- export const home = (rep: Request, res:Response) =>{
-     res.send('home no controller');
+export const home = (rep: Request, res: Response) => {
+  res.render("pages/page");
+};
 
-    //res.render('pages/pages')
-}
+export const dogs = (rep: Request, res: Response) => {
+  res.send("dogs");
+};
 
-export const dogs = (rep: Request, res:Response) =>{
+export const cats = (rep: Request, res: Response) => {
+  res.send("cats");
+  //res.render('pages/pages')
+};
 
-    //res.render('pages/pages')
-}
-
-export const cats = (rep: Request, res:Response) =>{
-
-    //res.render('pages/pages')
-}
-
-export const fishes = (rep: Request, res:Response) =>{
-
-    //res.render('pages/pages')
-}
-
+export const fishes = (rep: Request, res: Response) => {
+  res.send("fishes");
+  //res.render('pages/pages')
+};

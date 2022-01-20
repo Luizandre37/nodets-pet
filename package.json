@@ -5,12 +5,13 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start-dev":"nodemon -e ts,json,mustache src/server.ts" 
+    "start-dev": "nodemon -e ts,json,mustache src/server.ts"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "dotenv": "^12.0.4",
+    "engine": "^1.0.0",
     "express": "^4.17.2",
     "ts-node": "^10.4.0"
   },
