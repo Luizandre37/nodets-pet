@@ -1,7 +1,12 @@
 import { Request, Response } from "express";
 
 export const home = (rep: Request, res: Response) => {
-  res.render("pages/page");
+  res.render("pages/page", {
+    banner: {
+      title: "Todos os animais",
+      backaground: "allanimals.jpg",
+    },
+  });
 };
 
 export const dogs = (rep: Request, res: Response) => {
