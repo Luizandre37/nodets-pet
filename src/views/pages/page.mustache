@@ -1,19 +1,30 @@
 {{>partials/header}}
 
 {{#banner}}
-<section class="banner" style="background-image: url('images/{{ background }}')">{{ title }}</section>
+<section class="banner" style="background-image: url('images/{{backaground}}')">{{ title }}</section>
 <h2>{{title }} disponíveis para adoção</h2>
 {{/banner}}
 
 <div class="container list">
-    <div class="item">
-        <img src="images/pastor-alemao.jpg" class="item--image" />
-        <div class="item--name">Pastor-alemão</div>
-        <div class="item--color">Cor: Amarelo e Preto</div>
-        <div class="item--genre">Gênero: Masculino</div>
-     </div>
-    </div>
+
+    {{#list}}
+        <div class="item">
+            <img src="images/{{ image }}" class="item--image" />
+            <div class="item--name">{{ name }}</div>
+            <div class="item--color">Cor:{{ color }}</div>
+            <div class="item--genre">Gênero: {{ sex }}</div>
+        </div>
+    {{/list}}
+  </div>
+
+  
+{{^list}}
+<div class="container no-list">
+<h2> Não ha pet com esse nome !!!!</h2>
+
 </div>
+
+{{/list}}
 {{>partials/footer}}
 
 
